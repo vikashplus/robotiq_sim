@@ -29,33 +29,33 @@
     </default>
 
     <sensor>
-        <jointpos name="robotiq_2f_85" joint="robotiq_2f_85_left_driver_joint"/>
+        <jointpos name="robotiq_2f_85" joint="robotiq_2f_85_right_driver_joint"/>
     </sensor>
 
     <equality>
-        <connect anchor="0 0.037 0.043" body1="robotiq_2f_85_left_spring_link" body2="robotiq_2f_85_left_follower" name="robotiq_2f_85_left"/>
         <connect anchor="0 0.037 0.043" body1="robotiq_2f_85_right_spring_link" body2="robotiq_2f_85_right_follower" name="robotiq_2f_85_right"/>
+        <connect anchor="0 0.037 0.043" body1="robotiq_2f_85_left_spring_link" body2="robotiq_2f_85_left_follower" name="robotiq_2f_85_left"/>
     </equality>
 
     <!-- ====== ACTUATION-Opt0: Joint constrainted: Joint mimic each other.  ====== -->
     <equality>
-        <joint joint1="robotiq_2f_85_left_driver_joint" joint2="robotiq_2f_85_right_driver_joint"/>
+        <joint joint1="robotiq_2f_85_right_driver_joint" joint2="robotiq_2f_85_left_driver_joint"/>
     </equality>
     <actuator>
-        <position name="robotiq_2f_85" joint="robotiq_2f_85_left_driver_joint" ctrlrange="0 1" ctrllimited="true"/>
+        <position name="robotiq_2f_85" joint="robotiq_2f_85_right_driver_joint" ctrlrange="0 1" ctrllimited="true"/>
     </actuator>
 
     <!-- ====== ACTUATION-Opt1: Individually actuated: Uses twice as many actuators than hardware ======-->
     <!-- <actuator>
-        <position name="robotiq_2f_85_left" joint="robotiq_2f_85_left_driver_joint" ctrlrange="0 1" ctrllimited="true"/>
         <position name="robotiq_2f_85_right" joint="robotiq_2f_85_right_driver_joint" ctrlrange="0 1" ctrllimited="true"/>
+        <position name="robotiq_2f_85_left" joint="robotiq_2f_85_left_driver_joint" ctrlrange="0 1" ctrllimited="true"/>
     </actuator> -->
 
     <!-- ====== ACTUATION-Opt2: Tendon constrainted: Joints try to compensate for each other. We donot see this behavior in hardware ======-->
     <!-- <tendon>
         <fixed name="robotiq_2f_85_cplr">
-            <joint joint="robotiq_2f_85_left_driver_joint" coef="1"/>
             <joint joint="robotiq_2f_85_right_driver_joint" coef="1"/>
+            <joint joint="robotiq_2f_85_left_driver_joint" coef="1"/>
         </fixed>
     </tendon>
      <actuator>

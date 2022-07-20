@@ -5,7 +5,7 @@
     <include file="../robotiq_sim/assets/assets.xml"/>
 
     <worldbody>
-        <include file="../robotiq_sim/assets/body.xml"/>
+        <include file="../robotiq_sim/assets/chain.xml"/>
     </worldbody>
 
 </mujoco>
