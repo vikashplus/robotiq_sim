@@ -9,6 +9,7 @@
 
     <body name="robotiq_2f_85" pos="0 0 0" childclass="robotiq2f85">
         <geom class="robotiq_viz" mesh="robotiq-2f-base" />
+        <geom type="mesh" mesh="robotiq-2f-base" euler="0 0 0"/>
         <body name="robotiq_2f_85_right_driver" pos="0 0.0306011 0.054904">
             <inertial pos="0 0.01575 0.05295" quat="0.738425 0.674335 0 0" mass="0.2" diaginertia="0.00043212 0.000431866 0.000360253" />
             <joint name="robotiq_2f_85_right_driver_joint" range="0 0.834" />
