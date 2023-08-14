@@ -64,7 +64,7 @@
     </equality>
     
     <actuator>
-        <position name="robotiq_2f_85" joint="robotiq_2f_85_right_driver_joint" ctrlrange="0 1" ctrllimited="true"/>
+        <position name="robotiq_2f_85" joint="robotiq_2f_85_right_driver_joint" ctrlrange="0 0.834" ctrllimited="true"/>
     </actuator>
 
     <sensor>
