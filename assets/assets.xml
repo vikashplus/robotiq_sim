@@ -67,6 +67,13 @@
         <position name="robotiq_2f_85" joint="robotiq_2f_85_right_driver_joint" ctrlrange="0 1" ctrllimited="true"/>
     </actuator>
 
+    <sensor>
+        <touch site="touch_sensor_left" name="touch_sensor_left" user="0 0 2"/>
+        <touch site="touch_sensor_right" name="touch_sensor_right" user="0 0 2"/>
+        <velocimeter site="palm_sensor_site" name="palm_velocimeter" />
+        <accelerometer site="palm_sensor_site" name="palm_accelerometer" />        
+    </sensor>
+
     <!-- ====== ACTUATION-Opt1: Individually actuated: Uses twice as many actuators than hardware ======-->
     <!-- <actuator>
         <position name="robotiq_2f_85_right" joint="robotiq_2f_85_right_driver_joint" ctrlrange="0 1" ctrllimited="true"/>
